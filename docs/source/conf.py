@@ -18,8 +18,12 @@ release = '0.1.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.autodoc',
+    'autodoc2',
     'sphinx.ext.napoleon'
+]
+
+autodoc2_packages = [
+    "../../text_advanced"
 ]
 
 templates_path = ['_templates']
@@ -30,5 +34,8 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+autodoc2_render_as_dir = "apidocs"
+autodoc2_output_dir = "apidocs"
