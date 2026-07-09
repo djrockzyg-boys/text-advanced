@@ -31,3 +31,12 @@ text\_advanced
    :members:
    :show-inheritance:
    :undoc-members:
+
+example of color use:
+---------------------
+::
+
+   from text_advanced import Color
+   from text_advanced.printing import prints
+
+   prints("Hello Guys!", color=Color.Red())
