@@ -6,6 +6,6 @@ build:
 python:
   install:
     - method: pip
-      path: ./text_advanced
+      path: .
 sphinx:
   configuration: docs/source/conf.py

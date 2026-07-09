@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import os, sys
 
-sys.path.insert(0, os.path.abspath('../../text_advanced'))
+sys.path.insert(0, os.path.abspath('../../'))
 
 project = 'text-advanced'
 copyright = '2026, Monil Darediya'
