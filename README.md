@@ -13,10 +13,10 @@ from text_advanced import Color
 
 # All colors of text_advanced
 Color.Red()
-Colr.Black()
+Color.Black()
 Color.Green()
-Colr.Yellow()
+Color.Yellow()
 Color.Blue()
-Colr.White()
+Color.White()
 Color.Default()
 ```
