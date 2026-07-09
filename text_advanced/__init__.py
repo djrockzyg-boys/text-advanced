@@ -1,6 +1,6 @@
 """A library for advanced text management"""
 
-from . import printing, inputs
+from . import printing, inputs, format
 
 class Color():
     def __init__(self, number: int, name: str):
