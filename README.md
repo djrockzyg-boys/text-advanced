@@ -1,5 +1,6 @@
 # Text Advanced
 - A library for advanced text management
+- see the [docs](https://text-advanced.readthedocs.io/en/latest/text_advanced.html)
 ### Some Examples:
 ```python
 from text_advanced.printing import prints
