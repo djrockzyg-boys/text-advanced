@@ -9,3 +9,7 @@ text-advanced documentation
 
 - Python Library for advanced text management
 - Uses no dependencies
+
+.. automethod:: text_advanced.Color.Red
+
+- see our :doc:`/text_advanced` page
