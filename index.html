@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 26.2.3.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css" integrity="sha512-rO+olRTkcf304DQBxSWxln8JXCzTHlKnIdnMUwYvQa9/Jd4cQaNkItIUj6Z4nvW1dqK0SKXLbn9h4KwZTNtAyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #3b3b3b;
+			color: white;
+			font-family: "Ubuntu", sans-serif;
+		}
+		font {
+			color: #ccc;
+		}
+		h1, h2, h3 {border-bottom: 2px solid grey;}
+		h1 {
+			font-size: 70px;
+		}
+		h2 {
+			font-size: 60px;
+		}
+		h3 {
+			font-size: 50px;
+		}
+		h4 {
+			font-size: 40px;
+		}
+		h5 {
+			font-size: 30px;
+		}
+		p {
+			font-size: 20px;
+		}
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(0, 0, 0, 0.5);
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			backdrop-filter: blur(2px);
+			transition: color 0.2s ease-in-out;
+		}
+		nav a {
+			font-size: 90px;
+		}
+		nav.at-top {
+			color: white;
+		}
+		nav.scrolled {
+			color: rgba(200, 200, 255, 0.5);
+		}
+		div {
+			display: grid;
+			justify-items: left;
+		}
+	</style>
+</head>
+<body>
+<nav class="at-top"><a>
+text-advanced</a></nav>
+<div>
+<h2 class="western">Points:</h2>
+<ul>
+	<li><p>A python library made for text management.</p></li>
+	<li><p>Uses no other dependencies.</p></li>
+</ul>
+<h2 class="western">Class:</h2>
+<h3 class="western"><font style="font-family: 'Ubuntu Mono', monospace;">Color(number:
+int, name: str)</font>:</h3>
+<ul>
+	<li><p>A color class for terminal color</p></li>
+</ul>
+<h4 class="western">All colors are:</h4>
+<pre><code class="language-python" style="font-family: 'Ubuntu Mono', monospace;">Color.Red()<br/>
+Color.Black()<br/>
+Color.Green()<br/>
+Color.Yellow()<br/>
+Color.Blue()<br/>
+Color.White()<br/>
+Color.Default()</code></pre><h2 class="western">
+Modules:</h2>
+<h3 class="western">inputs:</h3>
+<h4 class="western"><font style="font-family: 'Ubuntu Mono', monospace;">selector(prompt,
+selected_prompt)</font>:</h4>
+<ul>
+	<li><p>this is used for input in a rich style, Ex:</p></li>
+</ul>
+<pre><code class="language-python" style="font-family: 'Ubuntu Mono', monospace;">from text_advanced.inputs import selector<br/>
+<br/>
+ask = selector(&quot;What is the date?&quot;)</code></pre>
+<ul>
+	<li><p>Output will be:</p></li>
+</ul>
+<pre><code class="language-text" style="font-family: 'Ubuntu Mono', monospace;">What is the date? &gt;&gt;</code></pre>
+<ul>
+	<li><p>After entering some date like <b>8-7-2026</b>, the text would
+	change to:</p></li>
+</ul>
+<pre><code class="language-text" style="font-family: 'Ubuntu Mono', monospace;">Selected Option (8-7-2024)</code></pre><h3 class="western">
+printing:</h3>
+<h4 class="western">class <font style="font-family: 'Ubuntu Mono', monospace;">Stream(*values)</font>:</h4>
+<ul>
+	<li><p>this class is used for streaming outputs</p></li>
+</ul>
+<pre><code class="language-python" style="font-family: 'Ubuntu Mono', monospace;">from text_advanced.printing import Stream<br/>
+<br/>
+textstr = Stream(&quot;Hello What's up&quot;)</code></pre><h5 class="western">
+<font style="font-family: 'Ubuntu Mono', monospace;">print_stream(timer: float,
+sep: str, end: str)</font>:</h5>
+<ul>
+	<li><p>prints the text letter by letter</p></li>
+</ul>
+<h5 class="western"><font style="font-family: 'Ubuntu Mono', monospace;">print_spaces(timer:
+float, sep: str, end: str)</font>:</h5>
+<ul>
+	<li><p>prints the text space by space</p></li>
+</ul>
+<h5 class="western"><font style="font-family: 'Ubuntu Mono', monospace;">print_newline(timer:
+float, sep: str, end: str)</font>:</h5>
+<ul>
+	<li><p>prints the text newline by newline</p></li>
+</ul>
+<h4 class="western">function <font style="font-family: 'Ubuntu Mono', monospace;">prints(*vals:
+str, color: Color | None, sep, end: str, flush: bool)</font>:</h4>
+<ul>
+	<li><p>prints the string with a <b>specific color</b>.</p></li>
+</ul>
+<h1 class="western">CHANGE LOG</h1>
+<ul>
+	<li><p>latest release</p></li>
+</ul>
+<p><br/>
+<br/>
+
+</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+	hljs.highlightAll();
+	let navbr = document.querySelector('nav');
+	window.addEventListener('scroll', () => {
+		if (window.scrollY === 0) {
+			navbr.classList.add("at-top");
+			navbr.classList.remove("scrolled");
+		} else {
+			navbr.classList.add("scrolled");
+			navbr.classList.remove("at-top");
+		}
+	});
+</script>
+</body>
+</html>
