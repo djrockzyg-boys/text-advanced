@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.abspath('../../'))
 project = 'text-advanced'
 copyright = '2026, Monil Darediya'
 author = 'Monil Darediya'
-release = '0.1.1'
+release = '0.1.4'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
