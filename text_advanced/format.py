@@ -63,7 +63,8 @@ class TerminalStrFormat:
         for6 = re.sub(r"\[blue\](.*?)\[/blue\]", "\x1b[34m\\1\x1b[0m", for5)
         for7 = re.sub(r"\[white\](.*?)\[/white\]", "\x1b[37m\\1\x1b[0m", for6)
         for8 = re.sub(r"\[black\](.*?)\[/black\]", "\x1b[30m\\1\x1b[0m", for7)
-        print(for8)
+        for9 = re.sub(r"\[bolditalic\](.*?)\[/bolditalic\]", "\x1b[1;3m\\1\x1b[0m", for8)
+        print(for9)
     
     def print_values(self):
         for1 = re.sub(r"\[bold\](.*?)\[/bold\]", r"\1", self.string)
@@ -74,7 +75,8 @@ class TerminalStrFormat:
         for6 = re.sub(r"\[blue\](.*?)\[/blue\]", r"\1", for5)
         for7 = re.sub(r"\[white\](.*?)\[/white\]", r"\1", for6)
         for8 = re.sub(r"\[black\](.*?)\[/black\]", r"\1", for7)
-        print(for8)
+        for9 = re.sub(r"\[bolditalic\](.*?)\[/bolditalic\]", r"\1", for8)
+        print(for9)
     
     def get_formatted(self):
         for1 = re.sub(r"\[bold\](.*?)\[/bold\]", "\x1b[1m\\1\x1b[0m", self.string)
@@ -85,7 +87,8 @@ class TerminalStrFormat:
         for6 = re.sub(r"\[blue\](.*?)\[/blue\]", "\x1b[34m\\1\x1b[0m", for5)
         for7 = re.sub(r"\[white\](.*?)\[/white\]", "\x1b[37m\\1\x1b[0m", for6)
         for8 = re.sub(r"\[black\](.*?)\[/black\]", "\x1b[30m\\1\x1b[0m", for7)
-        return for8
+        for9 = re.sub(r"\[bolditalic\](.*?)\[/bolditalic\]", "\x1b[1;3m\\1\x1b[0m", for8)
+        return for9
     
     def get_values(self):
         for1 = re.sub(r"\[bold\](.*?)\[/bold\]", r"\1", self.string)
@@ -96,4 +99,5 @@ class TerminalStrFormat:
         for6 = re.sub(r"\[blue\](.*?)\[/blue\]", r"\1", for5)
         for7 = re.sub(r"\[white\](.*?)\[/white\]", r"\1", for6)
         for8 = re.sub(r"\[black\](.*?)\[/black\]", r"\1", for7)
-        return for8
+        for9 = re.sub(r"\[bolditalic\](.*?)\[/bolditalic\]", r"\1", for8)
+        return for9
