@@ -4,7 +4,7 @@ from __future__ import annotations
 import time, typing
 
 if typing.TYPE_CHECKING:
-    from . import Color
+    from . import Color, Style
 
 class Stream():
     def __init__(self, *vals: str):
@@ -36,20 +36,27 @@ class Stream():
     def __repr__(self) -> str:
         return f"Stream(vals=\"{' '.join(self.vals)}\")"
 
-def prints(*vals: str, color: Color | None = None, sep: str = " ", end: str = "\n", flush: bool = False):
-    """Prints the text as a special color
-    ```python
-    from text_advanced.printing import prints
-    from text_advanced import Color
-    
-    prints("Hello", color=Color.Red()) # Outputs Hello in Red
-    ```
+def prints(*vals: str, color: Color | None = None, style: Style | None = None, sep: str = " ", end: str = "\n", flush: bool = False):
+    """Prints the text as a special color:
+    `prints("Hello", color=Color.Red())` Outputs Hello in Red
     """
     if color is None:
         from . import Color
         color = Color.Default()
+    if style is None:
+        from . import Style
+        style = Style.Reset()
     valscomb = sep.join(vals)
     try:
-        print(f"\x1b[{color.number}m"+valscomb+"\x1b[0m", end=end, flush=flush)
-    except AttributeError:
-        raise ValueError(f"type should be 'Color' or 'None' but it is '{type(color).__name__}'.") from None
+        stylemap = {
+            0: "\x1b[0m",
+            1: "\x1b[1m",
+            2: "\x1b[3m",
+            3: "\x1b[1;3m"
+        } 
+        print(f"\x1b[{color.number}m{stylemap[style.flag]}"+valscomb+"\x1b[0m", end=end, flush=flush)
+    except AttributeError as a:
+        if a.name == "flag":
+            raise ValueError(f'expected \'Style\' but got \'{type(style).__name__}\'.') from None
+        else:
+            raise ValueError(f'expected \'Color\' but got \'{type(color).__name__}\'.') from None
