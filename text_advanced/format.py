@@ -11,5 +11,5 @@ class FormatStr(typing.TypedDict):
 def format_terminal(dicts: list[FormatStr]):
     alltexts = []
     for ditc in dicts:
-        alltexts.append(f"\x1b[{ditc.color.number}m{ditc.value}\x1b[0m")
+        alltexts.append(f"\x1b[{ditc['color'].number}m{ditc['value']}\x1b[0m")
     return " ".join(alltexts)
