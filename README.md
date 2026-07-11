@@ -39,12 +39,12 @@ Color.Default()
     }
 ]
 ```
-- `TerminalStrFormat(dicts: list[FormatStr])`
+- `TerminalStrFormat()`
   - `print_formatted()`
   - `print_values()`
   - `get_formatted() -> str`
   - `get_values() -> str`
-- `TerminalDictFormat()`
+- `TerminalDictFormat(dicts: list[FormatStr])`
   - `print_formatted()`
   - `print_values()`
   - `get_formatted() -> str`
