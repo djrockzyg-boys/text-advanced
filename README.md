@@ -59,4 +59,4 @@ formt = TerminalStrFormat(
 ```
 - `BorderText(text: str, color: Color)`
   - `normal()` - Returns normal text
-  - `print(BorderText(...))` - Returns a Table
+  - `print(BorderText(...))` - Returns text enclosed in a border
