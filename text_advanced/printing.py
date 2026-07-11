@@ -1,6 +1,7 @@
 """printing module of **text-advanced**, used for *printing* and *streaming*"""
 
 from __future__ import annotations
+import re
 import time, typing
 
 if typing.TYPE_CHECKING:
@@ -67,11 +68,12 @@ class BorderText:
             from . import Color
             color = Color.Default()
         textsbynw = text.split("\n")
-        texlenmax = max(len(s) for s in textsbynw)
+        ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
+        texlenmax = max(len(ansi_escape.sub('', s)) for s in textsbynw)
         retlist = []
         retlist.append(f"\x1b[{color.number}m+"+"-" * texlenmax+"+\x1b[0m")
         for textbynw in textsbynw:
-            retlist.append(f"\x1b[{color.number}m|\x1b[0m"+textbynw+" " * (texlenmax - len(textbynw))+f"\x1b[{color.number}m|\x1b[0m")
+            retlist.append(f"\x1b[{color.number}m|\x1b[0m"+textbynw+" " * (texlenmax - len(ansi_escape.sub('', textbynw)))+f"\x1b[{color.number}m|\x1b[0m")
         retlist.append(f"\x1b[{color.number}m+"+"-" * texlenmax+"+\x1b[0m")
         self.retlist = retlist
         self.text = text
