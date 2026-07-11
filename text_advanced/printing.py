@@ -60,3 +60,22 @@ def prints(*vals: str, color: Color | None = None, style: Style | None = None, s
             raise ValueError(f'expected \'Style\' but got \'{type(style).__name__}\'.') from None
         else:
             raise ValueError(f'expected \'Color\' but got \'{type(color).__name__}\'.') from None
+
+class BorderText:
+    def __init__(self, text: str, color: Color | None = None):
+        if color is None:
+            from . import Color
+            color = Color.Default()
+        textsbynw = text.split("\n")
+        texlenmax = max(len(s) for s in textsbynw)
+        retlist = []
+        retlist.append(f"\x1b[{color.number}m+"+"-" * texlenmax+"+\x1b[0m")
+        for textbynw in textsbynw:
+            retlist.append(f"\x1b[{color.number}m|\x1b[0m"+textbynw+" " * (texlenmax - len(textbynw))+f"\x1b[{color.number}m|\x1b[0m")
+        retlist.append(f"\x1b[{color.number}m+"+"-" * texlenmax+"+\x1b[0m")
+        self.retlist = retlist
+        self.text = text
+    def __repr__(self) -> str:
+        return "\n".join(self.retlist)
+    def normal(self) -> str:
+        return self.text

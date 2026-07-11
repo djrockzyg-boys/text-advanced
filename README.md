@@ -23,7 +23,7 @@ Color.Default()
 ```
 
 # CHANGELOG
-## Module Added
+### Module Added
 - `text_advanced.format`
 ### Classes Added:
 - `class FormatStr(TypedDict)`:
@@ -57,3 +57,6 @@ formt = TerminalStrFormat(
     "[bold]Yo[/bold] [red]wassup![/red]"
 )
 ```
+- `BorderText(text: str, color: Color)`
+  - `normal()` - Returns normal text
+  - `print(BorderText(...))` - Returns a Table

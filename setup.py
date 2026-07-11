@@ -8,7 +8,7 @@ with open(os.path.join(here, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="text-advanced",                     # The name people will use to pip install your library
-    version="0.1.5",                       # The initial version of your package
+    version="0.1.6",                       # The initial version of your package
     author="Monil Darediya",
     author_email="monildarediya1@gmail.com",
     description="A python library for advanced text management",
